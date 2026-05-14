@@ -1,7 +1,4 @@
-Tentu, ini adalah kode mentahan (Markdown) untuk file README.md yang telah diperbarui.
-Versi ini dirancang agar tampil lebih profesional di GitHub, lengkap dengan tabel informasi, blok
-kode yang jelas, dan navigasi yang mudah dibaca.
-Silakan salin kode di bawah ini:
+
 # ⚡ MIUI PERFORMANCE PRO: GARENA FREE FIRE EDITION ⚡
 ![Shell
 Script](https://img.shields.io/badge/Script-Shell-green?style=for-the-
