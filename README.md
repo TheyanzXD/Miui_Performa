@@ -56,10 +56,21 @@ sh /sdcard/Miui_Performa/reset.sh
  * **❄️ Thermal Controller:** Bypass limitasi panas pada perangkat Android.
 ### 🤝 Connect with Me
 <p align="left">
-<a href="[https://t.me/foryourfutures](https://t.me/foryourfutures)" target="blank"><img align="center" src="[https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/telegram.svg](https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/telegram.svg)" alt="TheyanzXD" height="30" width="40" /></a>
-<a href="[https://github.com/TheyanzXD](https://github.com/TheyanXD)" target="blank"><img align="center" src="[https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg](https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg)" alt="TheyanzXD" height="30" width="40" /></a>
-<a href="[https://instagram.com/THEYANZXD](https://instagram.com/TheyanzXD)" target="blank"><img align="center" src="[https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg](https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg)" alt="TheyanzXD" height="30" width="40" /></a>
+  <!-- Telegram -->
+  <a href="https://t.me/foryourfutures" target="_blank">
+    <img src="https://img.shields.io/badge/Telegram-26A6E2?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" height="35" />
+  </a>
+  <!-- GitHub -->
+  <a href="https://github.com/TheyanzXD" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" height="35" />
+  </a>
+  <!-- Instagram -->
+  <a href="https://instagram.com/TheyanzXD" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" height="35" />
+  </a>
 </p>
+
+
 
 ### 🛡️ System Status
 
