@@ -81,5 +81,6 @@ $ status
 > [ WORKING ON NEW TWEAKS ]
 $ uptime
 > 24/7 Coding Mode Active
+```
 
 *Maintained with ❤️ by THEYANZXD*
