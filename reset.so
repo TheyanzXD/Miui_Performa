@@ -1,0 +1,29 @@
+#!/system/bin/sh
+
+echo " __  __ ___ _   _ ___        ____  ____   ___  "
+echo "|  \/  |_ _| | | |_ _|      |  _ \|  _ \ / _ \ "
+echo "| |\/| || || | | || | _____ | |_) | |_) | | | |"
+echo "| |  | || || ||_____||  __/|  _ <| |_| |"
+echo "|_|  |_|___|\___/|___|      |_|   |_| \_\\___/ "
+echo "------------------------------------------------"
+echo "REVERTING TO SYSTEM DEFAULT..."
+
+# Reset MIUI Parameters
+service call miui.mqsas.IMQSNative 21 i32 1 s16 "setprop" i32 1 s16 "persist.sys.fboservice.ctrl false" s16 "/dev/null" i32 600
+service call miui.mqsas.IMQSNative 21 i32 1 s16 "persist.sys.aries.power_profile balance" s16 "/dev/null" i32 600
+service call miui.mqsas.IMQSNative 21 i32 1 s16 "persist.sys.power.default.powermode normal" s16 "/dev/null" i32 600
+
+# Reset Refresh Rate & Animation
+settings put global peak_refresh_rate 60.0
+settings put global min_refresh_rate 60.0
+settings put global window_animation_scale 1.0
+settings put global transition_animation_scale 1.0
+settings put global animator_duration_scale 1.0
+cmd power set-fixed-performance-mode-enabled false
+
+# Reset Resolution
+wm size reset
+wm density reset
+
+echo "------------------------------------------------"
+echo "DONE: System Restored."

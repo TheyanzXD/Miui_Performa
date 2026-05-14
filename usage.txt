@@ -1,0 +1,3 @@
+jalankan menggunakan aplikasi brevent
+kode untuk menjalankan "sh /sdcard/Miui_Performa/run.so"
+dan kode untuk mereset "sh /sdcard/Miui_Performa/reset.so"

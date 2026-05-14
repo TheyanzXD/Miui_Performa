@@ -1,0 +1,80 @@
+#!/system/bin/sh
+
+# --- ASCII ART BANNER ---
+echo " __  __ ___ _   _ ___        ____  ____   ___  "
+echo "|  \/  |_ _| | | |_ _|      |  _ \|  _ \ / _ \ "
+echo "| |\/| || || | | || | _____ | |_) | |_) | | | |"
+echo "| |  | || || |_| || ||_____||  __/|  _ <| |_| |"
+echo "|_|  |_|___|\___/|___|      |_|   |_| \_\\___/ "
+echo "------------------------------------------------"
+sleep 1
+# --- PHONE INFORMATION ---
+echo " ____  _   _  ___  _   _ _____   "
+echo "|  _ \| | | |/ _ \| \ | | ____|  "
+echo "| |_) | |_| | | | |  \| |  _|    "
+echo "|  __/|  _  | |_| | |\  | |___   "
+echo "|_|   |_| |_|\___/|_| \_|_____|  "
+echo " ___ _   _ _____ ___  ____  __  __    _  _____ ___ ___  _   _ "
+echo "|_ _| \ | |  ___/ _ \|  _ \|  \/  |  / \|_   _|_ _/ _ \| \ | |"
+echo " | ||  \| | |_ | | | | |_) | |\/| | / _ \ | |  | | | | |  \| |"
+echo " | || |\  |  _|| |_| |  _ <| |  | |/ ___ \| |  | | |_| | |\  |"
+echo "|___|_| \_|_|   \___/|_| \_\_|  |_/_/   \_\_| |___\___/|_| \_|"
+echo "------------------------------------------------"
+echo "Model       : $(getprop ro.product.model)"
+echo "Brand       : $(getprop ro.product.brand)"
+echo "Android Ver : $(getprop ro.build.version.release)"
+echo "Kernel      : $(uname -r)"
+echo "Display     : $(getprop ro.sf.lcd_density) DPI"
+echo "------------------------------------------------"
+sleep 1
+# --- ACTIVATING MAIN CODES ---
+echo "    _    ____ _____ _____     ___ _____ ___ _   _  ____ "
+echo "   / \  / ___|_   _|_ _\ \   / /_ _|_   _|_ _| \ | |/ ___|"
+echo "  / _ \| |     | |  | | \ \ / / | |  | |  | ||  \| | |  _ "
+echo " / ___ \ |___  | |  | |  \ V /  | |  | |  | || |\  | |_| |"
+echo "/_/   \_\____| |_| |___|  \_/  |___| |_| |___|_| \_|\____|"
+echo "------------------------------------------------"
+sleep 1
+# MIUI Performance Tweaks
+service call miui.mqsas.IMQSNative 21 i32 1 s16 "setprop" i32 1 s16 "persist.sys.fboservice.ctrl true" s16 "/dev/null" i32 600
+service call miui.mqsas.IMQSNative 21 i32 1 s16 "setprop" i32 1 s16 "persist.sys.use_mi_new_strategy true" s16 "/dev/null" i32 600
+service call miui.mqsas.IMQSNative 21 i32 1 s16 "setprop" i32 1 s16 "persist.sys.smartop.support_dynamic_performance true" s16 "/dev/null" i32 600
+service call miui.mqsas.IMQSNative 21 i32 1 s16 "setprop" i32 1 s16 "persist.sys.aries.power_profile high" s16 "/dev/null" i32 600
+service call miui.mqsas.IMQSNative 21 i32 1 s16 "setprop" i32 1 s16 "persist.sys.power.default.powermode enhance" s16 "/dev/null" i32 600
+sleep 1
+# Game & Foreground Focus Optimizations
+echo "[*] Focusing resources on foreground applications..."
+settings put global activity_manager_constants max_cached_processes=128
+settings put global window_animation_scale 0.5
+settings put global transition_animation_scale 0.5
+settings put global animator_duration_scale 0.5
+sleep 1
+# Unlock FPS for Free Fire & Free Fire Max
+echo "[*] Unlocking 144 FPS for Free Fire..."
+cmd power set-fixed-performance-mode-enabled true
+settings put global peak_refresh_rate 144.0
+settings put global min_refresh_rate 144.0
+sleep 1
+# Priority for Free Fire packages
+for pkg in com.dts.freefireth com.dts.freefiremax; do
+    cmd package compile -m speed -f $pkg > /dev/null 2>&1
+    cmd appops set $pkg GET_USAGE_STATS allow
+done
+sleep 1
+
+# --- RESOLUTION CHANGER ---
+echo " ____  _____ ____   ___  _    _   _ _____ ___ ___  _   _ "
+echo "|  _ \| ____/ ___| / _ \| |  | | | |_   _|_ _/ _ \| \ | |"
+echo "| |_) |  _| \___ \| | | | |  | | | | | |  | | | | |  \| |"
+echo "|  _ <| |___ ___) | |_| | |__| |_| | | |  | | |_| | |\  |"
+echo "|_| \_\_____|____/ \___/|_____\___/  |_| |___\___/|_| \_|"
+echo "  ____ _   _    _    _   _  ____ _____ ____  "
+echo " / ___| | | |  / \  | \ | |/ ___| ____|  _ \ "
+echo "| |   | |_| | / _ \ |  \| | |  _|  _| | |_) |"
+echo "| |___|  _  |/ ___ \| |\  | |_| | |___|  _ < "
+echo " \____|_| |_/_/   \_\_| \_|\____|_____|_| \_\\"
+echo "------------------------------------------------"
+sleep 1
+wm size 1280x2850
+wm density 400
+echo "SUCCESS: High Performance & Resolution Applied."
