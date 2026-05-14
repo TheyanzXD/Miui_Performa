@@ -29,5 +29,4 @@ Ikuti langkah-langkah di bawah ini untuk mengaktifkan mode tempur:
 2.  **Aktivasi**: Buka aplikasi **Brevent**, pilih *Exec Command*, dan masukkan kode berikut:
     ```bash
     sh /sdcard/Miui_Performa/run.so
-http://googleusercontent.com/immersive_entry_chip/0
-http://googleusercontent.com/immersive_entry_chip/1
+    
